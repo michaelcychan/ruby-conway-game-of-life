@@ -1,5 +1,5 @@
-require './board'
-require './cell'
+require_relative 'board'
+require_relative 'cell'
 
 board = Board.new(Cell)
 board.populate([[1,0], [1,1], [1,2], [3, 5], [4, 3], [4, 4], [4, 5], [5, 5]])
