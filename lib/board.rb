@@ -12,4 +12,6 @@ class Board
       @board[cell_pos[0]][cell_pos[1]] = '🐣'
     end
   end
+
+  
 end

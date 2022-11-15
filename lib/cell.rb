@@ -1,10 +1,18 @@
 class Cell
-  def initialize(x_pos, y_pos)
-    @pos = [x_pos, y_pos]
+  def initialize()
+    @status = '💀'
   end
 
-  def get_pos()
-    return @pos
+  def get_status()
+    return @status
   end
-  
+
+  def make_alive()
+    @status = '🐣'
+  end
+
+  def kill_cell()
+    @status = '💀'
+  end
+
 end
