@@ -15,12 +15,6 @@ class Board
     end
   end
 
-  def print_board
-    @board.each do |row|
-      print row.join('')
-    end
-  end
-
   def populate(cells_pos)
     cells_pos.each do |cell_pos|
       @board[cell_pos[0]][cell_pos[1]].make_alive()
