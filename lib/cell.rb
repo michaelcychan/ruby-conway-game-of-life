@@ -1,17 +1,17 @@
 class Cell
-  def initialize()
+  def initialize
     @status = '💀'
   end
 
-  def get_status()
+  def get_status
     return @status
   end
 
-  def make_alive()
+  def make_alive
     @status = '🐣'
   end
 
-  def kill_cell()
+  def kill_cell
     @status = '💀'
   end
 
