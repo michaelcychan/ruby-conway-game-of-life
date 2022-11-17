@@ -15,13 +15,13 @@ RSpec.describe 'Board' do
         ['💀', '💀', '💀', '💀', '💀', '💀', '💀', '💀'],
       ]
 
-      board = Board.new(Cell)
+      board = Board.new(Cell, 8)
       expect(board).to be_a Board
       expect(board.show_board()).to eq(expected_board)
     end
 
     it 'fills board with one cell' do
-      board = Board.new(Cell)
+      board = Board.new(Cell, 8)
       board.populate([[0,0]])
       expected_board_array = [
         ['🐣', '💀', '💀', '💀', '💀', '💀', '💀', '💀'],
@@ -37,7 +37,7 @@ RSpec.describe 'Board' do
     end
 
     it 'fills board with cells at assigned positions' do
-      board = Board.new(Cell)
+      board = Board.new(Cell, 8)
       board.populate([[0,0], [3, 4], [3, 5], [4, 3], [4, 4], [5, 5]])
       expected_board_array = [
         ['🐣', '💀', '💀', '💀', '💀', '💀', '💀', '💀'],
@@ -54,7 +54,7 @@ RSpec.describe 'Board' do
   end
   describe 'game progressing' do
     it 'can count the living neighbours' do
-      board = Board.new(Cell)
+      board = Board.new(Cell, 8)
       board.populate([[3, 4], [3, 5], [4, 3], [4, 4], [5, 5]])
       expected_board_array = [
         ['💀', '💀', '💀', '💀', '💀', '💀', '💀', '💀'],
@@ -76,7 +76,7 @@ RSpec.describe 'Board' do
       expect(board.count_living_neighbours([7,7])).to eq(0)
     end
     it 'can change living and dead cells according to rule', focus: true do
-      board = Board.new(Cell)
+      board = Board.new(Cell, 8)
       board.populate([[3, 4], [3, 5], [4, 3], [4, 4], [4, 5], [5, 5]])
       expected_board_array_begin = [
         ['💀', '💀', '💀', '💀', '💀', '💀', '💀', '💀'], # 0

@@ -8,7 +8,7 @@ RSpec.describe 'Board' do
   describe 'successfully initiate board' do
     it 'creates a board with a size of 8 x 8' do
 
-      board = Board.new(FakeCell)
+      board = Board.new(FakeCell, 8)
       expect(board).to be_a Board
 
       cell_counter = 0
