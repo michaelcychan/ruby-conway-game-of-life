@@ -1,7 +1,7 @@
 require 'board'
 require 'cell'
 
-RSpec.describe 'Board' do
+RSpec.describe 'Integration Tests' do
   describe 'successfully initiate board' do
     it 'creates a board with dead cells' do
       expected_board = [
