@@ -9,4 +9,4 @@ clone the repo to local, run `bundle install`
 At root directory, run `ruby './lib/game.rb'`
 
 ## Screenshot
-<img src="./reference/Game_Screenshot.gif" />
+<img src="./reference/ConwayGameOfLife-Ruby.gif" />
