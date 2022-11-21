@@ -1,7 +1,9 @@
 require_relative 'board'
 require_relative 'cell'
+require_relative 'display'
 
-puts "Welcome to Conway's Game of Life"
+Display.init_greet
+
 user_input = " "
 while !(user_input.match(/\d{1,2}/) && user_input.to_i >=6 && user_input.to_i <=20) do
   puts "Please enter a square board size (6 - 20): "
@@ -43,16 +45,10 @@ board.populate(hash1[user_input.to_i])
 
 while true do
   system('clear')
-  board.show_board.each do |row|
-    for i in 0..(row.length-1) do
-      print row[i]
-      print " "
-    end
-    print "\n"
-  end
+
+  Display.print_board(board.show_board)
   
-  print "\n\n\n"
-  print "Press Ctrl + C to exit"
+  Display.print_screen_end
 
   sleep(1)
   
